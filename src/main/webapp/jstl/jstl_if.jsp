@@ -10,34 +10,25 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        .red {
-            color: red;
-        }
-    </style>
 </head>
 <body>
 
+<c:if test="${10 eq 10}">
+    참일 때 보여집니다.
+</c:if>
 
-${members}
 <hr>
-<br>
-${members[0]} <br>
-${members[1]} / ${members[1].name} <br><br>
 
-<c:out value="${members[0].name}">
-    <span class="red">입력정보 없음</span>
+이름 :
+<c:if test="${members[1].name eq null}">
+    입력된 정보가 없습니다.
+</c:if>
 
-</c:out>
+<hr>
 
-<br>
+<c:if test="${members[0].name == 'COOL0'}" var="result" scope="request"/>
 
-<c:out value="${members[1].name}" escapeXml="false">
-    <span class="red">입력정보 없음</span>
-
-</c:out>
-
-
+members[0].name == 'COOL0' => ${result}
 
 
 </body>
