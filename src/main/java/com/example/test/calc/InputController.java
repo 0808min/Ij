@@ -43,7 +43,7 @@ public class InputController extends HttpServlet {
         req.setAttribute("result", result);
 
         // 결과 view 생성 처리
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/calc.result.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/calc/result.jsp");
         dispatcher.forward(req, resp);
     }
 }

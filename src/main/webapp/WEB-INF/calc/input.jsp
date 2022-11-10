@@ -11,6 +11,7 @@
   <title>${title}</title>
 </head>
 <body>
+<h1>${title}</h1>
 <form method="post">
 
   <input type="number" name="num1" id="num1">
