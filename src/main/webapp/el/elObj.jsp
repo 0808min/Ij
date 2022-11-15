@@ -1,5 +1,5 @@
 <%@ page import="com.example.test.member.Member" %>
-<%@ page import="com.example.test.Product.Product" %><%--
+<%@ page import="com.example.test.util.Product.Product" %><%--
   Created by IntelliJ IDEA.
   User: cheoho-hi
   Date: 2022-11-09

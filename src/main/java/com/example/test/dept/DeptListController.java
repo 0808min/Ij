@@ -34,7 +34,6 @@ public class DeptListController extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/dept/list.jsp");
         dispatcher.forward(request, response);
 
-
     }
 
 }
