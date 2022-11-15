@@ -14,4 +14,6 @@ public interface MemberDao {
 
     int updateUUIDBYIdx(Connection conn, String uuid, int idx) throws SQLException;
 
+    Member selectBYUUID(Connection conn, String uuid) throws SQLException;
+
 }

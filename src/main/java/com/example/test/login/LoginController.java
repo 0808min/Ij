@@ -68,9 +68,10 @@ public class LoginController extends HttpServlet {
             if(rememberme != null && rememberme.equals("on")) {
                 // cookie 저장, DB Update
                 UUID uuid = UUID.randomUUID();
-                Cookie c = new Cookie("uuid", uuid.toString());
-                c.setMaxAge(60 * 60 * 24 * 30);
-                response.addCookie(c);
+                Cookie c1 = new Cookie("uuid", uuid.toString());
+                c1.setMaxAge(60 * 60 * 24 * 30);
+                c1.setPath("/");
+                response.addCookie(c1);
 
                 // 로그인 한 사용자의 uuid를 업데이트 처리
                 MemberService.getInstance().updateUUID(member.getIdx(), uuid.toString());

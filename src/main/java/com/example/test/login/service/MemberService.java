@@ -50,4 +50,9 @@ public class MemberService {
 
     }
 
+    public Member selectByUUID(String uuid) throws Exception {
+       @Cleanup Connection conn = ConnectionUtil.getInstance().getConnection();
+        return dao.selectBYUUID(conn, uuid);
+    }
+
 }

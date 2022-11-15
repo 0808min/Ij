@@ -53,4 +53,23 @@ public class MemberDaoImpl implements MemberDao {
 
         return result;
     }
+
+    @Override
+    public Member selectBYUUID(Connection conn, String uuid) throws SQLException {
+
+        String sql = "select * from member where uuid=?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1, uuid);
+        ResultSet rs = pstmt.executeQuery();
+
+        Member member = null;
+        if(rs.next()) {
+            member = new Member(
+                    rs.getInt(1),
+                    rs.getString(2),
+                    rs.getString(3),
+                    rs.getString(4));
+        }
+        return null;
+    }
 }
