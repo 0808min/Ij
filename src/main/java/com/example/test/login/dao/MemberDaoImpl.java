@@ -70,6 +70,6 @@ public class MemberDaoImpl implements MemberDao {
                     rs.getString(3),
                     rs.getString(4));
         }
-        return null;
+        return member;
     }
 }

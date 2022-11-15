@@ -51,7 +51,7 @@ public class LoginCheckFilter implements Filter {
                     Member member = MemberService.getInstance().selectByUUID(uuid);
 
                     if(member != null){
-                        log.info("uuid 값을 가지고 있는 회원의 정보로 로그인 처리");
+                        log.info("uuid 값을 가지고 있는 회원의 정보로 로그인 처리...");
                         session.setAttribute("loginInfo", member.getUid());
                     }
 
